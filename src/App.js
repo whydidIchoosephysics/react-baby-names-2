@@ -15,6 +15,7 @@ function App({names}) {
             searchValue={searchValue}
             setSearchValue={setSearchValue}/>
         <Shortlist
+            names={names}
             shortlist={shortlist}
             setShortlist={setShortlist}/>
         <NamePicker
