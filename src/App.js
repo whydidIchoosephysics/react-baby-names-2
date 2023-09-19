@@ -7,7 +7,7 @@ import {Shortlist} from './components/shortlist';
 import {ResetSearch} from './components/reset-search';
 import {Footer} from './components/footer';
 
-function App({names}) {
+function App() {
     const [searchValue, setSearchValue] = useState('');
     const [shortlist, setShortlist] = useState([]);
 
@@ -18,11 +18,9 @@ function App({names}) {
                 searchValue={searchValue}
                 setSearchValue={setSearchValue}/>
             <Shortlist
-                names={names}
                 shortlist={shortlist}
                 setShortlist={setShortlist}/>
             <NamePicker
-                names={names}
                 searchValue={searchValue}
                 shortlist={shortlist}
                 setShortlist={setShortlist}/>

@@ -1,7 +1,9 @@
-import React, {Fragment} from "react";
+import React, {Fragment, useContext} from "react";
 
+import { NamesContext } from "../providers/names";
 import { NameList } from "./name-list";
-export function Shortlist({names, shortlist, setShortlist}) {
+export function Shortlist({ shortlist, setShortlist}) {
+    const names = useContext(NamesContext);
 
     const shortListedNames = names.filter((entry) =>
         shortlist.includes(entry.id));

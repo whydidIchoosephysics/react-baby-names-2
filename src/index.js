@@ -6,15 +6,17 @@ import "./css/styles.css"
 
 // Components
 import App from './App';
+import { NamesProvider } from "./providers/names"
 
 // Data
-import {names} from "./data"
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App names={names}/>
+      <NamesProvider>
+          <App />
+      </NamesProvider>
   </React.StrictMode>
 );
 
